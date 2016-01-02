@@ -7,8 +7,14 @@ Acompanhe a [Wiki](https://github.com/lpgoncalves/PIC/wiki) do projeto para pode
 ### REQUISITOS MÍNIMOS
 - [Visual Studio 2013 Ultimate](https://www.microsoft.com/pt-br/download/details.aspx?id=48129).
 
-- Plugin: [Web Essentials 2013.5] (https://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361).
+- [Web Essentials 2013.5](https://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361) For Visual Studio.
+ 
+- [Nuget Package](https://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca) For Visual Studio.
+ 
+- [EntityFramework 5.0](https://www.nuget.org/packages/EntityFramework/5.0.0) For Visual Studio.
+
 - [Cmder](http://cmder.net/) With Git-For-Windows.
+
 - Conta no [Github](https://github.com) e no [Trello](https://trello.com).
 
 ### CONHECIMENTOS NECESSÁRIOS
