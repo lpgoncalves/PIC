@@ -49,4 +49,7 @@ git remote add origin https://github.com/lpgoncalves/PIC
 
 Lembrando que informações sobre como dar o commit e tratar possíveis conflitos serão encontradas na [Wiki](https://github.com/lpgoncalves/PIC/wiki) do projeto.
 
+### ERROS, FALHAS, BUGS - ISSUES
+Ajude a melhorar a aplicação e sua documentação, abra um [issue](https://github.com/lpgoncalves/PIC/issues/new) se identificar algum comportamento inesperado da aplicação, podendo ser um erro, falhar ou bug, talvez até algo que faltou ser implementado.
+
 ####Em construção...
