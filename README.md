@@ -11,7 +11,7 @@ Acompanhe a [Wiki](https://github.com/lpgoncalves/PIC/wiki) do projeto para pode
  
 - [Nuget Package](https://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca) For Visual Studio.
  
-- [EntityFramework 5.0](https://www.nuget.org/packages/EntityFramework/5.0.0) For Visual Studio.
+- [EntityFramework 6.1.3](https://www.nuget.org/packages/EntityFramework) For Visual Studio.
 
 - [Cmder](http://cmder.net/) With Git-For-Windows.
 
