@@ -1,0 +1,143 @@
+﻿
+@model PIC_DATABASE.Models.Enum.UserType
+
+@using PIC_DATABASE.Models.Enum
+
+<!-- Sidebar -->
+<nav id="sidebar">
+    <!-- Sidebar Scroll Container -->
+    <div id="sidebar-scroll">
+        <!-- Sidebar Content -->
+        <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
+        <div class="sidebar-content">
+
+            <!-- Side Header -->
+            <div class="side-header side-content bg-white-op">
+                <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
+                    <i class="fa fa-times"></i>
+                </button>
+                <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
+                <div class="btn-group pull-right">
+                    <button class="btn btn-link text-gray dropdown-toggle" data-toggle="dropdown" type="button">
+                        <!-- button si-drop<i class="si si-drop"></i>-->
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right font-s13 sidebar-mini-hide">
+                        <li>
+                            <a data-toggle="theme" data-theme="default" tabindex="-1" href="javascript:void(0)">
+                                <!-- ICO Log  <i class="fa fa-circle text-default pull-right"></i> <span class="font-w600">Default</span> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="~/Content/Templates/Admin Template/css/themes/amethyst.min.css" tabindex="-1" href="javascript:void(0)">
+                                <!--<i class="fa fa-circle text-amethyst pull-right">--></i> <span class="font-w600">Amethyst</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="~/Content/Templates/Admin Template/css/themes/city.min.css" tabindex="-1" href="javascript:void(0)">
+                                <!-- <i class="fa fa-circle text-city pull-right">--></i> <span class="font-w600">City</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="~/Content/Templates/Admin Template/css/themes/flat.min.css" tabindex="-1" href="javascript:void(0)">
+                                <!--<i class="fa fa-circle text-flat pull-right">--></i> <span class="font-w600">Flat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="~/Content/Templates/Admin Template/css/themes/modern.min.css" tabindex="-1" href="javascript:void(0)">
+                                <!-- <i class="fa fa-circle text-modern pull-right">--></i> <span class="font-w600">Modern</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="~/Content/Templates/Admin Template/css/themes/smooth.min.css" tabindex="-1" href="javascript:void(0)">
+                                <!--<i class="fa fa-circle text-smooth pull-right">--> <span class="font-w600">Smooth</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--<a class="h5 text-white" href="index.html">-->
+                <!--<i class="fa fa-circle-o-notch text-primary"> -->
+
+                <span class="h4 font-w600 sidebar-mini-hide">
+                    <font color="#F5F7F7" face="DengXian">
+                        <i class="fa fa-user"></i>
+                        <b>
+                            @*<img src="../../../../Content/Login/Imagem/perfil2.png" width="34" />*@
+                            @Model.ToString() <!--== UserType.Visiontec? Cliente PIC : Model.ToString()-->
+                        </b>
+                    </font>
+                </span>
+
+
+                @*}
+                            @if (Model == UserType.Visiontec)
+                                        {
+                         <i class="fa fa-circle-o-notch text-primary">
+                    <center>
+                        <font color="#F5F7F7">
+                            <span class="h4 font-w600 sidebar-mini-hide">
+                                <img src="../../../../Content/Login/Imagem/perfil2.png" width="40" />
+                                Cliente PIC
+                            </span>
+                        </font>
+                    </center>
+                                        }
+                    @if (Model == UserType.Operador)       {
+                        <!-- <i class="fa fa-circle-o-notch text-primary"> -->
+                    <center>
+                        <font color="#F5F7F7">
+                            <span class="h4 font-w600 sidebar-mini-hide">
+                                <img src="../../../../Content/Login/Imagem/perfil2.png" width="40" />
+                                Operador
+                            </span>
+                        </font>
+                    </center>
+
+                                        }
+                    @if (Model == UserType.Desenvolvedor)
+                                        {
+                        <!-- <i class="fa fa-circle-o-notch text-primary"> -->
+                    <center>
+                        <font color="#F5F7F7">
+                            <span class="h4 font-w600 sidebar-mini-hide">
+                                <img src="../../../../Content/Login/Imagem/perfil2.png" width="40" />
+                                Desenvolvedor
+                            </span>
+                        </font>
+                    </center>
+                                        }*@
+            </div>
+            <!-- END Side Header -->
+            <!-- --------------------------------------------------------------------------------------------Side Content--------------------------------------------------------------------------------------------------- -->
+            <div class="side-content">
+                <ul class="nav-main">
+                    <li>
+                        <a class="active" data-toggle="nav-menu" href="@Url.Action("Index", "Home", new { UserType = Model })"><i class="si si-home"></i><span class="sidebar-mini-hide">Home</span></a>
+                    </li>
+                    <li class="nav-main-heading"><span class="sidebar-mini-hide">VISUALIZAR</span></li>
+                    <li>
+                        <a class="nav-menu" data-toggle="nav-menu" href="@Url.Action("PurchaseRequests", "Home", new { UserType = Model })"><i class="fa fa-usd"></i><span class="sidebar-mini-hide">Solicitação de Compra</span></a>
+                    </li>
+                    <li>
+                        <a class="nav-menu" data-toggle="nav-menu" href="@Url.Action("WithdrawalRequest", "Home", new { UserType = Model })"><i class="fa fa-truck"></i><span class="sidebar-mini-hide">Retirada de Materiais</span></a>
+                    </li>
+                    @if ((Model == UserType.Administrador) || (Model == UserType.Desenvolvedor))
+                    {
+                        <li><a class="nav-menu" data-toggle="nav-menu" href="@Url.Action("Reports", "Home", new { UserType = Model })"><i class="si si-note"></i><span class="sidebar-mini-hide">Relatórios</span></a></li>
+
+                        <li class="nav-main-heading"><span class="sidebar-mini-hide">EDITAR</span></li>
+                        <li>
+                            <a class="nav-menu" data-toggle="nav-menu" href="@Url.Action("Usuario", "Home", new { UserType = Model })"><i class="fa fa-child"></i><span class="sidebar-mini-hide">   Usuários</span></a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <!-- -------------------------------------------------------------------------------------------------END Side Content----------------------------------------------------------------------------- -->
+        </div>
+        <!-- Sidebar Content -->
+    </div>
+    <!-- END Sidebar Scroll Container -->
+</nav>
+<!-- END Sidebar -->

@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -132,10 +135,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Home\Views\Home\Add_usuario.cshtml" />
-    <Content Include="Areas\Home\Views\Home\Retirada.cshtml" />
+    <Content Include="Areas\Home\Views\Home\WithdrawalRequest.cshtml" />
     <Content Include="Areas\Home\Views\Home\Add_pedido.cshtml" />
-    <Content Include="Areas\Home\Views\Home\Compra.cshtml" />
-    <Content Include="Areas\Home\Views\Home\Relatorios.cshtml" />
+    <Content Include="Areas\Home\Views\Home\PurchaseRequests.cshtml" />
+    <Content Include="Areas\Home\Views\Home\Reports.cshtml" />
     <Content Include="Areas\Home\Views\Home\Usuario.cshtml" />
     <None Include="Areas\Home\Views\Home\Tests\home.cshtml" />
     <Content Include="Areas\Home\Views\Home\Tests\index2.html" />
@@ -789,6 +792,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\View1.cshtml" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Shared\_Sidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

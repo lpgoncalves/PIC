@@ -23,19 +23,19 @@ namespace PIC_MVC.Areas.Home.Controllers
         }
 
         [HttpGet]
-        public ActionResult Compra(UserType UserType)
+        public ActionResult PurchaseRequests(UserType UserType)
         {
             return View(UserType);
         }
 
         [HttpGet]
-        public ActionResult Retirada(UserType UserType)
+        public ActionResult WithdrawalRequest(UserType UserType)
         {
             return View(UserType);
         }
 
         [HttpGet]
-        public ActionResult Relatorios(UserType UserType)
+        public ActionResult Reports(UserType UserType)
         {
             return View(UserType);
         }
